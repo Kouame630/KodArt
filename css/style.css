@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Titan+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crete+Round:ital@0;1&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Crete Round', serif;
+    font-weight: bolder;
+    scroll-behavior: smooth;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: .08;
+    z-index: -1;
+}
+
+.program {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title, h1 {
+    font-family: 'Titan One', cursive;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    font-weight: 700;
+    opacity: 0.9;
+    color: rgb(254, 254, 254);
+    transition: 0.3s ease;
+}
+
+h1:hover {
+    color: #100f0f;
+}
+
+h4 {
+    color: rgb(255, 255, 255);
+    opacity: 0.9;
+    font-size: 1.7rem;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.navbar__items ul {
+    text-decoration: none;
+    list-style: none;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar__items ul li {
+    width: 100%;
+    margin: 0 20px;
+    padding: 0 5px;
+}
+
+.navbar__items ul li a {
+    font-size: 1.1rem;
+    padding-top: 3px;
+    font-weight: bolder;
+    font-style: italic;
+    text-decoration: none;
+    opacity: 0.9;
+    cursor: alias;
+    color: rgb(255, 255, 255);
+    transition: 0.3s ease;
+}
+
+.program .adress {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 450px;
+    width: 100%;
+    height: 50px;
+}
+
+#gps {
+    font-size: 30px;
+    color: aliceblue;
+    cursor: pointer;
+    margin-right: 10px;
+    opacity: 0.8;
+    transition: all 0.2ms ease;
+}
+
+#gps:hover {
+    color: bisque;
+}
+
+.program .adress p {
+    font-size: 1.1rem;
+    padding-top: 3px;
+    font-weight: bolder;
+    font-style: italic;
+    text-decoration: none;
+    opacity: 0.9;
+    color: rgb(255, 255, 255);
+    transition: 0.3s ease;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 90vh;
+    width: 100%;
+    height: 10vh;
+}
+
+#contact {
+    font-size: 50px;
+    cursor: alias;
+    color: aliceblue;
+    opacity: 0.8;
+}
+
+#contact:hover {
+    color: bisque;
+}
+
+.navbar__items ul li a:hover {
+    color: #100f0f;
+}
+
+.background-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -5;
+}
+
+
+.background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+}
+
+.showing {
+    opacity: 1;
+    z-index: -1;
+    transition: none;
+}
+
+
+
+@media screen and (max-width: 800px) {
+    .title, h1 {
+        font-size: 2.0rem;
+    }
+    
+    h4 {
+        font-size: 1.5rem;
+    }
+
+    .navbar__items ul {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .navbar__items ul li a {
+        font-size: 1.3rem;
+    }
+
+    #contact {
+        font-size: 40px;
+    }
+
+    .program .adress {
+        flex-direction: column;
+    }
+
+    .program .adress p {
+        font-size: 0.8rem;
+    }
+
+    #gps {
+        font-size: 25px;
+        margin-right: 0;
+    }
+}

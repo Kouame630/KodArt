@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/print-style.css">
+    <script src="https://kit.fontawesome.com/0c7f4411f3.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="js/print-app.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+          <a href="index.html" class="title"><h1>Kod Art</h1></a>
+        </div>
+        <div class="navigation">
+            <ul>
+                <i id="menu-close" class="fa-solid fa-xmark"></i>
+                <li>
+                    <a href="index.html"><h3>Home</h3></a>
+                </li>
+                <li>
+                  <a href="potfolio.html"><h3>Samples</h3></a>
+              </li>
+              <li>
+                  <a href="print.html"><h3>Prints</h3></a>
+              </li>
+              <li>
+                  <a href="contact.html"><h3>Contact</h3></a>
+              </li>
+            </ul>
+            <i id="menu-btn" class="fa-solid fa-bars"></i>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="reminder">
+            <p>If you find anything you like, and would like us to print it
+                for you, write to us with a description. We will do the printing and mailing
+                fo you!
+            </p>
+        </div>
+        <div class="form">
+            <form onsubmit="sendEmail(); reset(); return false;">
+                <ul class="form-list">
+                    <div class="id">
+                        <li>
+                            <input type="text" id="username" name="user_name" placeholder="Your name" required>
+                        </li>
+                    </div>
+                   <div class="contact">
+                        <li>
+                            <input type="email" id="email" name="user_email" placeholder="Your email" required>
+                        </li>
+                   </div>
+                   <div class="number">
+                        <li>
+                            <input type="number" id="phone" name="user_number" placeholder="Your number" required>
+                        </li>
+                   </div>
+                   <div class="size">
+                    <li>
+                        <input type="text" id="size" name="photo-size" placeholder="Exemple of size: 210x297mm" required>
+                    </li>
+                    </div>
+                    <div class="msg">
+                        <li>
+                            <textarea id="msg" name="user_message"placeholder="Photo description" required></textarea>
+                        </li>
+                    </div>
+                </ul>
+                <button type="submit" class="submit">Send</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

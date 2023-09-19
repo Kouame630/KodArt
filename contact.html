@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/contact-style.css">
+    <script src="https://kit.fontawesome.com/0c7f4411f3.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="js/contact-app.js" defer></script>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+          <a href="index.html" class="title"><h1>Kod Art</h1></a>
+        </div>
+        <div class="navigation">
+            <ul>
+                <i id="menu-close" class="fa-solid fa-xmark"></i>
+                <li>
+                    <a href="index.html"><h3>Home</h3></a>
+                </li>
+                <li>
+                  <a href="potfolio.html"><h3>Samples</h3></a>
+              </li>
+              <li>
+                  <a href="print.html"><h3>Prints</h3></a>
+              </li>
+              <li>
+                  <a href="contact.html"><h3>Contact</h3></a>
+              </li>
+            </ul>
+            <i id="menu-btn" class="fa-solid fa-bars"></i>
+        </div>
+    </nav>
+    <div class="content">
+        <section class="about">
+            <p>
+                Photographer and web design artist based in Fredericton, NB with two years of experience capturing  life on degetal camera. 
+                I grew up in the Ivory Coast where a geographically confined, 
+                small town upbringing instilled in me a ferocious curiosity about the larger world and a desire to use my camera to tell stories with depth, 
+                purpose and heart.
+            </p>
+            <img src="IMG_3722.JPG" alt="">
+        </section>
+        <section class="registration">
+            <div class="reminder">
+                <h2>Write to us!</h2>
+            </div>
+            <div class="form">
+                <form onsubmit="sendEmail(); reset(); return false;">
+                    <ul class="form-list">
+                        <div class="id">
+                            <li>
+                                <input type="text" id="username" name="user_name" placeholder="Your name" required>
+                            </li>
+                        </div>
+                       <div class="contact">
+                            <li>
+                                <input type="email" id="email" name="user_email" placeholder="Your email" required>
+                            </li>
+                       </div>
+                       <div class="number">
+                            <li>
+                                <input type="number" id="phone" name="user_number" placeholder="Your number" required>
+                            </li>
+                       </div>
+                        <div class="msg">
+                            <li>
+                                <textarea id="msg" name="user_message" placeholder="Your message" required></textarea>
+                            </li>
+                        </div>
+                    </ul>
+                    <button type="submit" class="submit">Send</button>
+                </form>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
