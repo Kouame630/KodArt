@@ -116,79 +116,168 @@ categories.forEach(category => {
     });
 });
 
-fetch("/js/birthday.json")
-  .then(response => response.json())
-  .then(birthdays => {
-    birthdays.forEach(birthday => {
-        let image = document.createElement('img')
-        image.setAttribute('src', `/editedImages/${birthday}`)
-        image.setAttribute('width', '100%')
-        categoryContent[3].appendChild(image)
-        });
-    });
 
-fetch("/js/collabs.json")
-  .then(response => response.json())
-  .then(collabs => {
-    collabs.forEach(collab => {
-        let image = document.createElement('img')
-        image.setAttribute('src', `/editedImages/${collab}`)
-        image.setAttribute('width', '100%')
-        categoryContent[6].appendChild(image)
+fetch("/js/portrait.json")
+    .then(response => {
+    if (!response.ok) {
+        throw new Error('Error Fetching');
+    }
+    return response.json();
+    })
+    .then(portraits => {
+        portraits.forEach(portrait => {
+            let image = document.createElement('img')
+            image.setAttribute('src', `/editedImages/${portrait}`)
+            image.setAttribute('width', '100%')
+            categoryContent[0].appendChild(image)
         });
-    });
+    })
+    .catch(error => {
+    if (error instanceof TypeError && error.message.includes('API key')) {
+        console.error('Invalid API key:', error);
+    } else {
+        console.error('There was a problem with the Fetch operation:', error);
+    }
+});
 
-fetch("/js/travels.json")
-  .then(response => response.json())
-  .then(travels => {
-    travels.forEach(travel => {
-        let image = document.createElement('img')
-        image.setAttribute('src', `/editedImages/${travel}`)
-        image.setAttribute('width', '100%')
-        categoryContent[5].appendChild(image)
-        });
-    });
 
-fetch("/js/graduation.json")
-  .then(response => response.json())
-  .then(graduations => {
-    graduations.forEach(graduation => {
-        let image = document.createElement('img')
-        image.setAttribute('src', `/editedImages/${graduation}`)
-        image.setAttribute('width', '100%')
-        categoryContent[4].appendChild(image)
+fetch("/js/landscape.json")
+    .then(response => {
+    if (!response.ok) {
+        throw new Error('Error Fetching');
+    }
+    return response.json();
+    })
+    .then(landscapes => {
+        landscapes.forEach(landscape => {
+            let image = document.createElement('img')
+            image.setAttribute('src', `/editedImages/${landscape}`)
+            image.setAttribute('width', '100%')
+            categoryContent[1].appendChild(image)
         });
+    })
+    .catch(error => {
+    if (error instanceof TypeError && error.message.includes('API key')) {
+        console.error('Invalid API key:', error);
+    } else {
+        console.error('There was a problem with the Fetch operation:', error);
+    }
     });
 
 fetch("/js/headshot.json")
-  .then(response => response.json())
-  .then(headshots => {
-    headshots.forEach(headshot => {
-        let image = document.createElement('img')
-        image.setAttribute('src', `/editedImages/${headshot}`)
-        image.setAttribute('width', '100%')
-        categoryContent[2].appendChild(image)
+    .then(response => {
+    if (!response.ok) {
+        throw new Error('Error Fetching');
+    }
+    return response.json();
+    })
+    .then(headshots => {
+        headshots.forEach(headshot => {
+            let image = document.createElement('img')
+            image.setAttribute('src', `/editedImages/${headshot}`)
+            image.setAttribute('width', '100%')
+            categoryContent[2].appendChild(image)
         });
+    })
+    .catch(error => {
+    if (error instanceof TypeError && error.message.includes('API key')) {
+        console.error('Invalid API key:', error);
+    } else {
+        console.error('There was a problem with the Fetch operation:', error);
+    }
     });
 
-fetch("/js/landscape.json")
-  .then(response => response.json())
-  .then(landscapes => {
-    landscapes.forEach(landscape => {
-        let image = document.createElement('img')
-        image.setAttribute('src', `/editedImages/${landscape}`)
-        image.setAttribute('width', '100%')
-        categoryContent[1].appendChild(image)
+
+fetch("/js/birthday.json")
+    .then(response => {
+    if (!response.ok) {
+        throw new Error('Error Fetching');
+    }
+    return response.json();
+    })
+    .then(birthdays => {
+        birthdays.forEach(birthday => {
+            let image = document.createElement('img')
+            image.setAttribute('src', `/editedImages/${birthday}`)
+            image.setAttribute('width', '100%')
+            categoryContent[3].appendChild(image)
         });
+    })
+    .catch(error => {
+    if (error instanceof TypeError && error.message.includes('API key')) {
+        console.error('Invalid API key:', error);
+    } else {
+        console.error('There was a problem with the Fetch operation:', error);
+    }
     });
 
-fetch("/js/portrait.json")
-  .then(response => response.json())
-  .then(portraits => {
-    portraits.forEach(portrait => {
-        let image = document.createElement('img')
-        image.setAttribute('src', `/editedImages/${portrait}`)
-        image.setAttribute('width', '100%')
-        categoryContent[0].appendChild(image)
+fetch("/js/graduation.json")
+    .then(response => {
+    if (!response.ok) {
+        throw new Error('Error Fetching');
+    }
+    return response.json();
+    })
+    .then(graduations => {
+        graduations.forEach(graduation => {
+            let image = document.createElement('img')
+            image.setAttribute('src', `/editedImages/${graduation}`)
+            image.setAttribute('width', '100%')
+            categoryContent[4].appendChild(image)
         });
+    })
+    .catch(error => {
+    if (error instanceof TypeError && error.message.includes('API key')) {
+        console.error('Invalid API key:', error);
+    } else {
+        console.error('There was a problem with the Fetch operation:', error);
+    }
+    });
+
+
+fetch("/js/travels.json")
+    .then(response => {
+    if (!response.ok) {
+        throw new Error('Error Fetching');
+    }
+    return response.json();
+    })
+    .then(travels => {
+        travels.forEach(travel => {
+            let image = document.createElement('img')
+            image.setAttribute('src', `/editedImages/${travel}`)
+            image.setAttribute('width', '100%')
+            categoryContent[5].appendChild(image)
+        });
+    })
+    .catch(error => {
+    if (error instanceof TypeError && error.message.includes('API key')) {
+        console.error('Invalid API key:', error);
+    } else {
+        console.error('There was a problem with the Fetch operation:', error);
+    }
+    });
+
+
+fetch("/js/collabs.json")
+    .then(response => {
+    if (!response.ok) {
+        throw new Error('Error Fetching');
+    }
+    return response.json();
+    })
+    .then(collabs => {
+        collabs.forEach(collab => {
+            let image = document.createElement('img')
+            image.setAttribute('src', `/editedImages/${collab}`)
+            image.setAttribute('width', '100%')
+            categoryContent[6].appendChild(image)
+        });
+    })
+    .catch(error => {
+    if (error instanceof TypeError && error.message.includes('API key')) {
+        console.error('Invalid API key:', error);
+    } else {
+        console.error('There was a problem with the Fetch operation:', error);
+    }
     });
