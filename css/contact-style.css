@@ -314,12 +314,20 @@ button:hover {
     width: 75%;
   }
 
+  .reminder h2 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+
   .about p {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
   .about img {
     width: 70%;
+  }
+
+  .form-list .msg textarea {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   }
 
   input {
